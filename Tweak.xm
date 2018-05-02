@@ -6,11 +6,22 @@
 - (BOOL)launchApplicationWithIdentifier:(NSString *)identifier suspended:(BOOL)suspend;
 @end
 
-static NSString *selectedApp;
+@interface SBControlCenterController
++(id)sharedInstance;
++(void)presentAnimated:(BOOL)arg1;
+@end
+
+#define PLIST_PATH @"/var/mobile/Library/Preferences/com.midnightchips.homehijackpreferences.plist" //Gets Preference bundle settings
+
+inline bool GetPrefBool(NSString *key) {
+return [[[NSDictionary dictionaryWithContentsOfFile:PLIST_PATH] valueForKey:key] boolValue]; //Looks for bool
+}
+
+static NSString *selectedApp; //Applist stuff
 static void loadPrefs() {
 NSDictionary *prefs = [NSDictionary dictionaryWithContentsOfFile:@"/var/mobile/Library/Preferences/com.midnightchips.homehijackpreferences.plist"];
 
-selectedApp = [prefs objectForKey:@"otherApp"];
+selectedApp = [prefs objectForKey:@"otherApp"]; //Setting up variables
 }
 /*%hook SBAssistantController
 -(BOOL)isAssistantVisible{
@@ -25,7 +36,11 @@ selectedApp = [prefs objectForKey:@"otherApp"];
 -(void)_viewWillAppearOnMainScreen:(BOOL)arg1{
     //[[UIApplication sharedApplication] launchApplicationWithIdentifier:@"com.amazon.echo" suspended:FALSE];
     loadPrefs();
-    if (selectedApp != nil){
+    if(GetPrefBool(@"kCC")){
+        [[%c(SBControlCenterController) sharedInstance] presentAnimated:TRUE];
+        %orig;
+    }
+    else if(selectedApp != nil){
         [[UIApplication sharedApplication] launchApplicationWithIdentifier:selectedApp suspended:FALSE];
         %orig(NO);
     }else{
@@ -40,7 +55,9 @@ selectedApp = [prefs objectForKey:@"otherApp"];
 %hook SBAssistantWindow
 -(id)initWithScreen:(id)arg1 layoutStrategy:(id)arg2 debugName:(id)arg3 scene:(id)arg4 {
     loadPrefs();
-    if (selectedApp !=nil){
+    if (selectedApp !=nil) {
+        return NULL;
+    }else if(GetPrefBool(@"kCC")){
         return NULL;
     }else{
         return %orig;

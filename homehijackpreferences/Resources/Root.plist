@@ -85,7 +85,7 @@
             <key>label</key>
             <string>Open The CC</string>
             <key>footerText</key>
-            <string>Hides Icon Labels</string>
+            <string>Because Maybe You Don't Want to Open an App (Make sure that you press the button that you use to call Siri after you open the CC, and make sure to not have any app selected.)</string>
         </dict>
         <dict>
             <key>cell</key>
@@ -176,7 +176,10 @@
 				<key>label</key>
 				<string>Help us continue to make tweaks :P</string>
 				</dict>
-
+				<dict>
+					<key>cell</key>
+					<string>PSGroupCell</string>
+				</dict>
 				<dict>
 					<key>cell</key>
 					<string>PSGroupCell</string>
