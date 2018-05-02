@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>items</key>
+	<array>
+		<dict>
+					 <key>cell</key>
+					 <string>PSGroupCell</string>
+					 <key>footerText</key>
+					 <string>HomeHijack</string>
+			 </dict>
+<dict>
+	 <key>cell</key>
+	 <string>PSStaticTextCell</string>
+	 <key>cellClass</key>
+	 <string>PFHeaderCell</string>
+	 <key>background</key>
+	 <string>#EFEFF4</string>
+	 <key>icon</key>
+	 <string>banner.png</string>
+	 <key>alignment</key>
+	 <string>0</string>
+	 <key>height</key>
+	 <integer>165</integer>
+
+</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Who uses Siri anyway?</string>
+		</dict>
+
+		<dict>
+		<key>cell</key>
+		<string>PSLinkCell</string>
+		<key>bundle</key>
+		<string>AppList</string>
+		<key>isController</key>
+		<string>1</string>
+		<key>label</key>
+		<string>In Your Opinion, Who's Better Then Siri?</string>
+		<key>icon</key>
+		<string></string>
+		<key>ALSettingsKey</key>
+		<string>otherApp</string>
+		<key>ALSettingsPath</key>
+		<string>/var/mobile/Library/Preferences/com.midnightchips.homehijackpreferences.plist</string>
+		<key>ALSingleEnabledMode</key>
+		<string>1</string>
+		<key>ALChangeNotification</key>
+		<string>com.midnightchips.homehijackpreferences/saved</string>
+		<key>ALSectionDescriptors</key>
+		<array>
+		<dict>
+		<key>cell-class-name</key>
+		<string>ALSwitchCell</string>
+		<key>predicate</key>
+		<string>isSystemApplication = TRUE</string>
+		<key>icon-size</key>
+		<string>29</string>
+		<key>suppress-hidden-apps</key>
+		<string>1</string>
+		<key>title</key>
+		<string>System Applications</string>
+		</dict>
+		<dict>
+		<key>cell-class-name</key>
+		<string>ALSwitchCell</string>
+		<key>predicate</key>
+		<string>isSystemApplication = FALSE</string>
+		<key>icon-size</key>
+		<string>29</string>
+		<key>suppress-hidden-apps</key>
+		<string>1</string>
+		<key>title</key>
+		<string>User Applications</string>
+		</dict>
+		</array>
+		</dict>
+
+				<dict>
+					<key>cell</key>
+					<string>PSGroupCell</string>
+					<key>label</key>
+					<string>Created By:</string>
+				</dict>
+
+				<dict>
+				<key>action</key>
+				<string>ContactmeTwitter</string>
+				<key>cell</key>
+				<string>PSButtonCell</string>
+				<key>icon</key>
+		        <string>twitter.png</string>
+				<key>label</key>
+				<string>@MidnightChip</string>
+				</dict>
+
+				<dict>
+				<key>action</key>
+				<string>ContactmeReddit</string>
+				<key>cell</key>
+				<string>PSButtonCell</string>
+				<key>icon</key>
+		        <string>reddit.png</string>
+				<key>label</key>
+				<string>/u/midnightchip</string>
+				</dict>
+
+				<dict>
+					<key>cell</key>
+					<string>PSGroupCell</string>
+					<key>label</key>
+					<string>Join the Auxilium Discord!</string>
+				</dict>
+
+				<dict>
+				<key>action</key>
+				<string>AuxiliumDiscord</string>
+				<key>cell</key>
+				<string>PSButtonCell</string>
+				<key>icon</key>
+		        <string>discord.png</string>
+				<key>label</key>
+				<string>Auxilium</string>
+				</dict>
+
+				<dict>
+					<key>cell</key>
+					<string>PSGroupCell</string>
+					<key>label</key>
+					<string>Support us and our antics!</string>
+					<key>footerText</key>
+					<string>We promise to never lock any of our content behind Patreon.</string>
+				</dict>
+
+				<dict>
+				<key>action</key>
+				<string>Paypal</string>
+				<key>cell</key>
+				<string>PSButtonCell</string>
+				<key>icon</key>
+		        <string>paypal.png</string>
+				<key>label</key>
+				<string>Buy us a soda or something ʕ•ᴥ•ʔ</string>
+				</dict>
+
+				<dict>
+				<key>action</key>
+				<string>Patreon</string>
+				<key>cell</key>
+				<string>PSButtonCell</string>
+				<key>icon</key>
+		        <string>patreon.png</string>
+				<key>label</key>
+				<string>Help us continue to make tweaks :P</string>
+				</dict>
+
+				<dict>
+					<key>cell</key>
+					<string>PSGroupCell</string>
+					<key>label</key>
+					<string>Thank you all that helped with this tweak. Especially Tony, without his help, I would still be banging my head against my keyboard, hoping that it would compile. We would also like to thank the community for being so supportive of us. I know that Auxilium is the new kid on the block, and we appreciate that you tolerate us :)</string>
+				</dict>
+
+
+	</array>
+	<key>title</key>
+	<string>HomeHijack AKA: Who the Heck is Siri</string>
+</dict>
+</plist>

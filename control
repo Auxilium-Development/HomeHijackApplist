@@ -1,0 +1,11 @@
+Package: com.midnightchips.homehijack
+Name: HomeHijack
+Depends: mobilesubstrate, applist, preferenceloader
+Version: 1.0
+Architecture: iphoneos-arm
+Description: Get rid of the annoying Siri, and use something worthwhile!
+Maintainer: MidnightChip
+Author: MidnightChip
+Section: Tweaks
+Depiction: https://repo.auxiliumdev.com/depictions/?p=HomeHijack
+Icon: file:///Library/PreferenceBundles/homehijackpreferences.bundle/icon.png
